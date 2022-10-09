@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "sort.h"
 /**
  * swap - swap two ints
  * @x: pointer to int
