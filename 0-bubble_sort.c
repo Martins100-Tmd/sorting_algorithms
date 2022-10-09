@@ -12,26 +12,6 @@ void swap(int *x, int *y)
 	*y = temp;
 }
 /**
- * prnt - print the element of an array
- * @arr: Array to be printed
- * @size: size of the array
- * Return: void
- */
-void prnt(int arr[], size_t size)
-{
-	int i;
-
-	for (i = 0; i < size; i++)
-	{
-		printf("%d", arr[i]);
-		if (i >= 0 && i < size - 1)
-		{
-			printf(", ");
-		}
-	}
-	printf("\n");
-}
-/**
  * bubble_sort - bubble sort an array
  * @array: array to be sorted
  * @size: size of array
@@ -50,24 +30,10 @@ void bubble_sort(int *array, size_t size)
 			{
 				swap(&array[j], &array[j + 1]);
 				flag = 1;
-			}
-			if (flag == 1)
-			{
-				prnt(array, size);
+				print_array(array, size);
 			}
 		}
+		if (flag == 1)
+			break;
 	}
-}
-/**
- * main - main function
- * Return: void
- */
-int main(void)
-{
-	int arr[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
-
-	size_t size = sizeof(arr) / sizeof(arr[0]);
-
-	bubble_sort(arr, size);
-	return (0);
 }
